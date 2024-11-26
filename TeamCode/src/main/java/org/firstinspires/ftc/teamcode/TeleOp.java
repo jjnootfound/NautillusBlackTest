@@ -10,7 +10,7 @@ import org.firstinspires.ftc.teamcode.subsystems.Slider;
 
 @com.qualcomm.robotcore.eventloop.opmode.TeleOp
 public class TeleOp extends OpMode {
-    private RobotContainer robotContainer;
+
     private Rotor rotor;
     private Claw claw;
     private Drivetrain drivetrain;
@@ -19,7 +19,6 @@ public class TeleOp extends OpMode {
 
     @Override
     public void init() {
-        robotContainer = new RobotContainer(hardwareMap);
         rotor = new Rotor(hardwareMap);
         claw = new Claw(hardwareMap);
         drivetrain = new Drivetrain(hardwareMap);
@@ -29,12 +28,7 @@ public class TeleOp extends OpMode {
     @Override
 
     public void loop() {
-        //código de la clase mecanum para el chasis
-        /*robotContainer.mecanum.drive(
-                gamepad1.left_stick_x,
-                -gamepad1.left_stick_y,
-                gamepad1.right_stick_x
-        ); */
+
         //código de la clase drivetrain para chasis
         double x = gamepad1.left_stick_x;
         double y = -gamepad1.left_stick_y;
