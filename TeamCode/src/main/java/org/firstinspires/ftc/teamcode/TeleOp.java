@@ -71,6 +71,5 @@ public class TeleOp extends OpMode {
         } else {
             claw.mantainClawTwistOnStandby();
         }
-
     }
 }

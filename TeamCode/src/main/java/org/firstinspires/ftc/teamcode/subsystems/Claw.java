@@ -14,21 +14,20 @@ public class Claw {
 
     //posisciones por definirse a la banqueta :/
     public void openClaw() {
-        ServoGarra.setPosition();
+        //ServoGarra.setPosition();
     }
     public void closeClaw() {
-        ServoGarra.setPosition();
+        //ServoGarra.setPosition();
     }
     public void twistClawClockwise(){
-
-        ServoBrazo.setPower(0.10);
+        ServoBrazo.setPosition(0.10);
     }
 
     public void twistClawCounterClockWise() {
-        ServoBrazo.setPower(-0.10);
+        ServoBrazo.setPosition(-0.10);
     }
 
     public void mantainClawTwistOnStandby() {
-        ServoBrazo.setPower(0);
+        ServoBrazo.setPosition(0);
     }
 }
