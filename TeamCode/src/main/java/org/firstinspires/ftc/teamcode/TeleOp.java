@@ -54,5 +54,23 @@ public class TeleOp extends OpMode {
             claw.closeClaw();
         }
 
+        //setear el ángulo del brazo :o
+        if(gamepad2.right_bumper) {
+            rotor.rotorGoesUp();
+        } else if (gamepad2.left_bumper) {
+            rotor.rotorGoesDown();
+        } else {
+            rotor.mantainsRotorsOnStandBy();
+        }
+
+        //rotar la clawwwww :p
+        if(gamepad2.a) {
+            claw.twistClawClockwise();
+        } else if (gamepad2.b) {
+            claw.twistClawCounterClockWise();
+        } else {
+            claw.mantainClawTwistOnStandby();
+        }
+
     }
 }

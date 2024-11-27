@@ -4,22 +4,31 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 
 public class Claw {
-    private Servo servoClaw;
-    private Servo servo360;
+    private Servo ServoGarra;
+    private Servo ServoBrazo;
 
     public Claw(HardwareMap hardwareMap) {
-        servoClaw = hardwareMap.get(Servo.class, "servoClaw");
-        servo360 = hardwareMap.get(Servo.class,"servo360");
+        ServoGarra = hardwareMap.get(Servo.class, "ServoGarra");
+        ServoBrazo = hardwareMap.get(Servo.class,"ServoBrazo");
     }
 
-    //positions to be defined
+    //posisciones por definirse a la banqueta :/
     public void openClaw() {
-
+        ServoGarra.setPosition();
     }
     public void closeClaw() {
-
+        ServoGarra.setPosition();
     }
-    public void twistClaw(){
+    public void twistClawClockwise(){
 
+        ServoBrazo.setPower(0.10);
+    }
+
+    public void twistClawCounterClockWise() {
+        ServoBrazo.setPower(-0.10);
+    }
+
+    public void mantainClawTwistOnStandby() {
+        ServoBrazo.setPower(0);
     }
 }

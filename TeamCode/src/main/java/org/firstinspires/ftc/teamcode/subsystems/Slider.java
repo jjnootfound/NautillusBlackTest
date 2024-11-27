@@ -4,12 +4,12 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class Slider {
-    private final DcMotor leftPulley;
-    private final DcMotor rightPulley;
+    private final DcMotor Pulley;
+    private final DcMotor SecondPulley;
 
     public Slider(HardwareMap hardwareMap) {
-        leftPulley = hardwareMap.get(DcMotor.class, "leftPulley");
-        rightPulley = hardwareMap.get(DcMotor.class, "rightPulley");
+        Pulley = hardwareMap.get(DcMotor.class, "Pulley");
+        SecondPulley = hardwareMap.get(DcMotor.class, "SecondPulley");
     }
     /*
     public void lowBasketTarget() {
@@ -23,16 +23,16 @@ public class Slider {
     }
     */
      public void expandSliders() {
-         rightPulley.setPower(1);
-         leftPulley.setPower(-1);
+         SecondPulley.setPower(1);
+         Pulley.setPower(1);
      }
 
     public void contractSliders() {
-        rightPulley.setPower(-1);
-        leftPulley.setPower(1);
+        SecondPulley.setPower(-1);
+        Pulley.setPower(-1);
     }
     public void stopSliders() {
-        rightPulley.setPower(0);
-        leftPulley.setPower(0);
+        SecondPulley.setPower(0);
+        Pulley.setPower(0);
     }
 }
